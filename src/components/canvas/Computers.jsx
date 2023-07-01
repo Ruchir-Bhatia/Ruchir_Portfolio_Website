@@ -7,6 +7,20 @@ import CanvasLoader from "../Loader";
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
+  useEffect(() => {
+    // Load the image
+    img = new Image();
+    img.src = "./desktop_pc/texture.png";
+    img.onload = () => {
+      // Set the texture after the image has loaded
+      computer.scene.traverse((child) => {
+        if (child.isMesh) {
+          child.material.map = img;
+        }
+      });
+    };
+  }, []);
+
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black' />
