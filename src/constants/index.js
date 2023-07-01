@@ -114,7 +114,7 @@ const technologies = [
   },
   {
     name: "docker",
-    icon: docker,
+    icon: html,
   },
 ];
 
