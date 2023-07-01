@@ -112,10 +112,6 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
-  {
-    name: "docker",
-    icon: html,
-  },
 ];
 
 const experiences = [
