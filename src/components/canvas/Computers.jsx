@@ -5,7 +5,9 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF({
+    src: "./desktop_pc/scene.gltf",
+  });
 
   const scale = isMobile ? 0.5 : 0.75;
   const position = isMobile ? [0, -3, -1.5] : [0, -3.25, -1.5];
@@ -40,6 +42,7 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      preload={require("./desktop_pc/scene.gltf")}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -54,5 +57,6 @@ const ComputersCanvas = () => {
     </Canvas>
   );
 };
+
 
 export default ComputersCanvas;
