@@ -1,7 +1,20 @@
-import { Html, useProgress } from "@react-three/drei";
+import { useProgress } from "@react-three/drei";
+
+const useProgressAll = () => {
+  const [progress, setProgress] = useState(0);
+
+  const onProgress = (value) => {
+    setProgress(value);
+  };
+
+  return {
+    progress,
+    onProgress,
+  };
+};
 
 const CanvasLoader = () => {
-  const { progress } = useProgress();
+  const { progress, onProgress } = useProgressAll();
   return (
     <Html
       as='div'
