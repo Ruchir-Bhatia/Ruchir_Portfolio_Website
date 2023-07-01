@@ -40,7 +40,6 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-      preload={require("./desktop_pc/scene.gltf")}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -55,6 +54,5 @@ const ComputersCanvas = () => {
     </Canvas>
   );
 };
-
 
 export default ComputersCanvas;
