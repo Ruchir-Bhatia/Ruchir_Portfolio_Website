@@ -5,9 +5,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF({
-    src: "./desktop_pc/scene.gltf",
-  });
+  const computer = useGLTF("./desktop_pc/scene.gltf");
 
   const scale = isMobile ? 0.5 : 0.75;
   const position = isMobile ? [0, -3, -1.5] : [0, -3.25, -1.5];
