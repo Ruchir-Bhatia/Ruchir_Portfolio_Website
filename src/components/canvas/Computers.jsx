@@ -32,27 +32,27 @@ const Computers = ({ isMobile }) => {
   );
 };
 
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { useGLTF } from "@react-three/drei";
+
 const ComputersCanvas = () => {
+  const computer = useGLTF("./desktop_pc/scene.gltf");
+
   return (
     <Canvas
-      frameloop="demand"
-      shadows
+      frameloop='demand'
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      preload={require("./desktop_pc/scene.gltf")}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={true} />
+        <OrbitControls enableZoom={false} />
+        <Computers isMobile={window.matchMedia("(max-width: 768px)").matches} />
       </Suspense>
-
-      <Preload all />
     </Canvas>
   );
 };
+
 
 export default ComputersCanvas;
