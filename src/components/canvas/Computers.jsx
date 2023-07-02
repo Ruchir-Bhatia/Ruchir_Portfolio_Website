@@ -32,24 +32,27 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-
 const ComputersCanvas = () => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
-
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
+      shadows
       dpr={[1, 2]}
+      camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-      preload={require("./desktop_pc/scene.gltf")}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Computers isMobile={window.matchMedia("(max-width: 768px)").matches} />
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
+        <Computers isMobile={false} />
       </Suspense>
+
+      <Preload all />
     </Canvas>
   );
 };
-
 
 export default ComputersCanvas;
