@@ -129,7 +129,7 @@ const experiences = [
     ],
   },
   {
-    title: "Summer Intern",
+    title: "Summer Intern at Redis",
     company_name: "Redis",
     icon: meta,
     iconBg: "#383E56",
