@@ -42,15 +42,15 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Front End Web Developer",
     icon: web,
   },
   {
-    title: "Front-End Developer",
+    title: "Full Stack Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "iOS Developer",
     icon: backend,
   },
   {
@@ -116,7 +116,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Member of Technical Team",
+    title: "Member of Technical And Management Team",
     company_name: "GDSC BVP Pune",
     icon: starbucks,
     iconBg: "#383E56",
@@ -129,26 +129,26 @@ const experiences = [
     ],
   },
   {
-    title: "Member of Management Team",
-    company_name: "GDSC BVP Pune",
-    icon: starbucks,
+    title: "Summer Intern",
+    company_name: "Redis",
+    icon: meta,
     iconBg: "#383E56",
-    date: "December 2020 - June 2023",
+    date: "June 2023 - September 2023",
     points: [
-      "Event Planning and Execution: Organized and executed technical events, workshops, webinars, and competitions to foster learning, networking, and skill-building opportunities for club members.",
-      "Community Building: Helped create a vibrant and inclusive community within the club, encouraging collaboration, knowledge-sharing, and mutual support among members.",
-      "Skill Development: Helped design and deliver programs, workshops, and training sessions to enhance the technical skills of club members, enabling their growth and professional development.",
+      "Completed the required assessments and Learned about the basics and advanced skills related to the Redis Database through courses provided on Redis Uniersity.",
+      "Teamwork: Helped work in a project in a team through my skill of Accessing Redis Database using JavaScript and performing as required by the team.",
+      "Skill Development: Developing skills necessary to perform and deliver in a corporate work environment and work under pressure as per the expectations and requirements.",
     ],
   },
   {
-    title: "Seeking Internship Opportunities",
+    title: "Seeking Job Opportunities",
     company_name: "Company needing Web Development interns",
     icon: shopify,
     iconBg: "#ffffff",
     date: "Currently",
     points: [
-      "Seeking internship opportunities and chance to work on front-end web development technologies and some backend technologies.",
-      "I am skilled at C++, C, HTML5, CSS3, Bootstrap, JavaScript, Front-end Frameworks (like React.js), jQuery, Node.js, Express.js, MongoDB, NoSQL, SQL, Github etc.",
+      "Seeking Internship and Job opportunities and chance to work on front-end web development technologies and some backend technologies.",
+      "I am skilled at C++, C, Swift, HTML5, CSS3, Bootstrap, JavaScript, Front-end Frameworks (like React.js), jQuery, Node.js, Express.js, MongoDB, NoSQL, SQL, Github etc.",
       "I have built Full stack project using the MERN stack. (MongoDB, Express.js, React, Node.js)",
       "I look forward to speaking with you regarding my skills and attributes which I believe will serve as an asset to support your company’s goals.",
     ],
